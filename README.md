@@ -1,49 +1,55 @@
-# ArtificialHub
+# Spiritual Light — Artist Gallery Template
 
-A curated gallery of AI-generated spiritual art — golden light, quiet horizons, moments of stillness.
+A complete single-file art gallery website with shopping cart, buyer checkout form, light & dark mode, and gradient design. No build tools, no frameworks — pure HTML, CSS and JavaScript.
 
-**Live site:** https://promiraeva.github.io/artificialhub/
+## What's included
 
-## About
+```
+spiritual-light-gallery/
+├── index.html          # The entire website (HTML + CSS + JS in one file)
+├── images/             # 6 demo artworks (PNG)
+└── README.md
+```
 
-ArtificialHub is a single-page art gallery built with plain HTML and CSS — no frameworks, no build step. It features:
+## How it works
+
+Open `index.html` in any browser — that's it. No installation, no build step, no server needed.
+
+Or drag the whole folder onto [Netlify Drop](https://app.netlify.com/drop) to put it online instantly.
+
+## Features
 
 - **Fully responsive** — desktop, tablet, mobile
 - **Light & dark mode** — automatic via `prefers-color-scheme`
-- **Warm editorial design** — cream/amber palette, serif display type
-- **Zero dependencies** — drop it on any static host
+- **Shopping cart** — add items, change quantity, remove (saved in browser)
+- **Checkout form** — buyer details: name, email, phone, address (with validation)
+- **Dual purchase** — direct "Buy" button per item + cart checkout
+- **Gradient design** — indigo & antique gold palette, editorial typography
 
-## Contents
+## Customize
 
-```
-artificialhub/
-├── index.html          # the entire site (HTML + CSS inline)
-└── images/             # 6 high-resolution artworks (PNG)
-    ├── 01-light-path.png
-    ├── 02-open-book.png
-    ├── 03-sieve.png
-    ├── 04-horizon.png
-    ├── 05-hands-light.png
-    └── 06-window.png
-```
-
-## Collection: Spiritual Light — Vol. 1
-
-| Artwork | Theme |
+| What | Where in index.html |
 |---|---|
-| The Path | Light breaking through |
-| The Word | Revelation |
-| The Sieve | Discernment |
-| The Horizon | Stillness |
-| The Offering | Grace |
-| The Window | Presence |
+| Product name | `<h3>` inside each `.card` |
+| Description | `<p>` inside each `.card` |
+| Price | `data-price` attribute on `.card` + `<span class="price">` |
+| Image | `src` of `<img>` + `data-image` attribute |
+| Payhip link (direct buy) | `data-payhip` attribute on `.card` |
+| Cart checkout link | `PAYHIP_CHECKOUT_LINK` in the `<script>` at the bottom |
+| Colors | CSS variables in `:root` at the top of `<style>` |
 
-## Usage
+### Quick start for sellers
 
-Open `index.html` in any browser, or deploy to GitHub Pages / Netlify / Vercel.
+1. Replace the demo images in `images/` with your own (keep the filenames or update the `src`)
+2. Edit each card's name, description, price
+3. Add your Payhip product links to `data-payhip` attributes
+4. Optionally set `PAYHIP_CHECKOUT_LINK` for the cart's final payment step
+5. Upload the folder to GitHub Pages, Netlify, or any static host
 
-Replace the `Buy on Payhip` button href with your own Payhip product URL to sell the collection.
+## Demo images
+
+The 6 included PNG images are AI-generated spiritual artworks (3000×4000 px) — use them as placeholders or replace with your own.
 
 ## License
 
-Artworks are sold under a personal-use license with each purchase. All art is AI-generated.
+Personal and commercial use.
